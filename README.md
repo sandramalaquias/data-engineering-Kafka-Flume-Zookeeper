@@ -2,8 +2,6 @@
 Container para execução do kafka, flume e zookeeper
 
 
-
-
 Este script foi feito usando Linux - Ubuntu - Description:	Ubuntu 22.04.4 LTS 
 Pré-requisto: docker desktop instalado cujo tutorial pode ser encontrado em (https://docs.docker.com/desktop/install/ubuntu/)
     
@@ -38,7 +36,9 @@ Pré-requisto: docker desktop instalado cujo tutorial pode ser encontrado em (ht
     -   Navegue até o diretório `/tmp` para visualizar os logs. O diretório para o qual as logs foram direcionadas está no arquivo flume-conf/config.conf => agent.sinks.file-sink.sink.directory = /tmp
         
     -   Procure por esse arquivo de log que contenha a mensagem enviada ao Kafka (qtde bytes >0)
-    - Dê um click com o botão direito e selecione "edit". Suas mensagens estarão presentes nesse arquivo.
+    -   Dê um click com o botão direito e selecione "edit". Suas mensagens estarão presentes nesse arquivo.
+  
+Ao final, libere os containeres executando ``docker compose down``.
         
 
 **Desafio Adicional:**
