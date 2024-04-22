@@ -1,0 +1,21 @@
+1. ativar o docker do kafka
+3. entrar na pasta docker como usuário: kafka docker exec -it -u root kafka-server /bin/bash
+4. Criar um tópico: 
+	/opt/bitnami/kafka/bin/kafka-topics.sh  --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 
+	--topic seila 
+4. criar um tópico com replication e partitions defaults e abrir para envio de mensagem ou só abrir para mensagem:  
+	bin/kafka-console-producer.sh --broker-list localhost:9092 --topic testTopic
+5. Enviar msg para um tópico existente: 
+	/opt/bitnami/kafka/bin/kafka-console-producer.sh  --bootstrap-server  localhost:9092 --topic seila 
+6. parar de enviar msg: <crlt C>
+7. Dá pra ver que tem mensagens via ui: http://localhost:8080
+8. Consumir todas as mensagens existentes no tópico: 
+	/opt/bitnami/kafka/bin/kafka-console-consumer.sh  --bootstrap-server localhost:9092   --topic testTopic  --from-beginning
+9. Consumir somente as mensagens novas:  
+	/opt/bitnami/kafka/bin/kafka-console-consumer.sh  --bootstrap-server localhost:9092   --topic testTopic
+10. listar os tópicos existentes: 
+	/opt/bitnami/kafka/bin/kafka-topics.sh  --list --bootstrap-server localhost:9092 
+
+
+
+
