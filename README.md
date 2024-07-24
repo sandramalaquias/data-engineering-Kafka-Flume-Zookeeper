@@ -1,5 +1,5 @@
 # data-engineering-Kafka-Flume-Zookeeper
-Container para execução do kafka, flume e zookeeper
+Here's a Docker Compose file to set up a container environment for Kafka, Flume, and Zookeeper. This setup ensures that all necessary components are properly configured and connected.
 
 
 Este script foi feito usando Linux - Ubuntu - Description:	Ubuntu 22.04.4 LTS 
